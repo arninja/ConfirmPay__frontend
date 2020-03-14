@@ -1,0 +1,2 @@
+rootProject.name='ConfirmPay_frontend'
+include ':app'
