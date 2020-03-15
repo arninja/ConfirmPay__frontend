@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
                         case R.id.nav_home:
                             selectedFragment = new HomeFragment();
                             break;
-                        case R.id.nav_Events:
+                        case R.id.nav_events:
                             selectedFragment = new EventsFragment();
                             break;
                         case R.id.nav_settings:
