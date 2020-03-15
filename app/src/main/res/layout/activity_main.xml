@@ -24,17 +24,34 @@
         android:id="@+id/dateTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Date"
-        android:textSize="24sp"
-        android:layout_above="@+id/button_date"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="28dp"/>
+        android:text=""
+        android:textSize="18sp"
+        android:layout_below="@+id/button_date"
+        android:layout_centerHorizontal="true"/>
+
     <Button
         android:id="@+id/button_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Dagsetning viðburðar"
+        android:text="EVENT DATE"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"/>
+
+    <TextView
+        android:id="@+id/timeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="18sp"
+        android:layout_below="@+id/button_time"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/button_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PICK TIME"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/dateTextView"/>
 
 </RelativeLayout>
