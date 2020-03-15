@@ -16,7 +16,7 @@ import android.widget.TextView;
 import java.text.DateFormat;
 import java.util.Calendar;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements DatePickerDialog.OnDateSetListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +30,27 @@ public class MainActivity extends AppCompatActivity {
         //Hér vísum við í hvaða síðu við viljum vitna í eftir keyrslu og skilaboð
         //þeirrar síðu (Home) birtast.
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
+
+        Button button = (Button) findViewById(R.id.button_date);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DialogFragment datePicker = new DatePickerFragment();
+                datePicker.show(getSupportFragmentManager(), "Date Picker");
+            }
+        });
+    }
+
+    @Override
+    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(Calendar.YEAR, year);
+        calendar.set(Calendar.MONTH, month);
+        calendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+        String currentEventDate = DateFormat.getDateInstance(DateFormat.FULL).format(calendar.getTime());
+
+        TextView textView = (TextView) findViewById(R.id.dateTextView);
+        textView.setText(currentEventDate);
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =
