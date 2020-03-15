@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:text="Settings Fragment"
         android:textSize="24sp"
-        android:layout_centerInParent="true"/>
+        android:layout_centerHorizontal="true"/>
 
 
 </RelativeLayout>
