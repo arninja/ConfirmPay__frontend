@@ -11,5 +11,22 @@
         android:textSize="24sp"
         android:layout_centerHorizontal="true"/>
 
+    <TextView
+        android:id="@+id/dateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date"
+        android:textSize="24sp"
+        android:layout_above="@+id/button_date"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="28dp"/>
+    <Button
+        android:id="@+id/button_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dagsetning viðburðar"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+
 
 </RelativeLayout>
