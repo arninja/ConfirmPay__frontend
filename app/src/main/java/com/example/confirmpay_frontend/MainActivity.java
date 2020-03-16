@@ -9,6 +9,7 @@ import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.text.format.Time;
 import android.view.MenuItem;
 import android.view.View;
@@ -19,13 +20,17 @@ import android.widget.TimePicker;
 
 import java.text.DateFormat;
 import java.util.Calendar;
+import android.util.Log;
 
 public class MainActivity extends AppCompatActivity implements DatePickerDialog.OnDateSetListener, TimePickerDialog.OnTimeSetListener, View.OnClickListener {
 
+    public static final String TAG = MainActivity.class.getSimpleName();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        System.out.println("TAG"+TAG);
+        Log.e(TAG, "My tag is here");
 
         BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
@@ -97,7 +102,5 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
                 timePicker.show(getSupportFragmentManager(), "TimePicker");
                 break;
         }
-
-
     }
 }
